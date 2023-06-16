@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Draggable</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main>
+        <div class="todo">
+            <div>
+                <input type="text" id="todo">
+                <button onclick="add(tododiv)">Add</button>
+            </div>
+            <div id="tododiv" style="display: block;padding:20px;height:200px ;">
+
+
+
+            </div>
+
+
+        </div>
+        <div class="working">
+            <div>
+                <input type="text" id="working">
+                <button onclick="add(workingdiv)">Add</button>
+            </div>
+
+            <div id="workdiv" style="display: block;padding:20px ;height:200px ;"></div>
+
+        </div>
+        <div class="done">
+            <div>
+                <input type="text" id="done">
+                <button onclick="add(donediv)">Add</button>
+
+            </div>
+            <div id="donediv" style="display: block;padding:20px;height:200px ;"></div>
+
+        </div>
+
+
+
+
+    </main>
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

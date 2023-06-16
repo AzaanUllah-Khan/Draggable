@@ -14,28 +14,31 @@
 
     <main>
         <div class="todo">
+            <h1>To Do</h1>
             <div>
                 <input type="text" id="todo">
                 <button onclick="add(tododiv)">Add</button>
             </div>
             <div id="tododiv" style="display: block;padding:20px;height:200px ;">
-
-
-
+                
+                
+                
             </div>
 
-
+            
         </div>
         <div class="working">
+            <h1>Working</h1>
             <div>
                 <input type="text" id="working">
                 <button onclick="add(workingdiv)">Add</button>
             </div>
-
+            
             <div id="workdiv" style="display: block;padding:20px ;height:200px ;"></div>
-
+            
         </div>
         <div class="done">
+            <h1>Done</h1>
             <div>
                 <input type="text" id="done">
                 <button onclick="add(donediv)">Add</button>
@@ -44,13 +47,17 @@
             <div id="donediv" style="display: block;padding:20px;height:200px ;"></div>
 
         </div>
+        <div class="done" style="display: none;">
+            <div id="deldiv" style="display:none;padding:20px;height:200px ;"></div>
+
+        </div>
 
 
 
 
     </main>
 
-
+<button id="del" style="position: absolute; bottom: 50px; width: 50px; height: 50px; background-color: rgb(255, 131, 131); outline: none; border: 2px solid red; border-radius: 50%;">X</button>
 
 
 

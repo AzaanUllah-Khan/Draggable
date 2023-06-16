@@ -4,11 +4,13 @@ var done = document.getElementById("done");
 var tododiv = document.getElementById("tododiv");
 var workingdiv = document.getElementById("workdiv");
 var donediv = document.getElementById("donediv");
+var del = document.getElementById("del");
+var deldiv = document.getElementById("deldiv");
 var lists;
 
 function add(div) {
-    var inputValue = div.previousElementSibling.querySelector("input[type='text']").value;
-    div.innerHTML += `<p class='list' draggable='true' style='border:1px solid grey;padding:5px;margin-bottom:10px;width:250px;'>${inputValue}</p>`;
+    var inputValue = div.previousElementSibling.querySelector("input[type='text']");
+    div.innerHTML += `<p class='list' draggable='true' style='border:1px solid grey;padding:5px;margin-bottom:10px;width:250px;'>${inputValue.value}</p>`;
     lists = document.getElementsByClassName("list");
     for (var list of lists) {
         list.addEventListener("dragstart", function (e) {
@@ -36,8 +38,14 @@ function add(div) {
                 donediv.appendChild(select);
                 select = null;
             });
+            del.addEventListener("dragover", function (e) {
+                e.preventDefault();
+            });
+            del.addEventListener("drop", function (e) {
+                deldiv.appendChild(select);
+                select = null;
+            });
         });
-
-        console.log(inputValue);
+        inputValue.value=""
     }
 }
